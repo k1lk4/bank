@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${param.error}">
+    Неправильный пароль или логин
+</div>
+<div th:if="${param.logout}">
+    Вы вышли из аккаунта
+</div>
+<form th:action="@{/bank/login}" th:method="post">
+    <input name="login" type="text" placeholder="Логин">
+    <input name="password" type="text" placeholder="Пароль">
+    <input type="submit" value="Войти">
+</form>
+</body>
+</html>

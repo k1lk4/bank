@@ -1,8 +1,10 @@
 package ru.aretinsky.bank.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import ru.aretinsky.bank.entity.Card;
+import org.springframework.stereotype.Repository;
+import ru.aretinsky.bank.model.entity.Card;
 
+@Repository
 public interface CardRepository extends CrudRepository<Card, Integer> {
-    Card findByUsername(String username);
+    Boolean existsByCardId(Long id);
 }

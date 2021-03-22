@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация в Аретинский банк</title>
+</head>
+<body>
+<form th:action="@{/bank/reg/submit}" th:method="post" th:object="${user}">
+    <input name="firstname" type="text" placeholder="Имя">
+    <input name="secondname" type="text" placeholder="Фамилия">
+    <input name="password" type="text" placeholder="Пароль">
+    <input name="login" type="text" placeholder="Логин">
+    <input name="email" type="email" placeholder="Email">
+    <input name="age" type="number" placeholder="Возраст">
+    <input name="phone" type="tel" placeholder="Номер телефона">
+    <input name="birthDate" type="date" placeholder="Дата рождения">
+    <select name="sex">
+        <option value="0">Мужской</option>
+        <option value="1">Женский</option>
+    </select>
+    <select name="country">
+        <option value="RUSSIA">Россия</option>
+        <option value="UKRAINE">Украина</option>
+        <option value="BELARUS">Беларусь</option>
+        <option value="KAZAKHSTAN">Казахстан</option>
+        <option value="AZERBAIJAN">Азербайджан</option>
+        <option value="ARMENIA">Армения</option>
+        <option value="GEORGIA">Грузия</option>
+        <option value="KYRGYZSTAN">Киргизия</option>
+        <option value="MOLDOVA">Молдовия</option>
+        <option value="TAJIKISTAN">Таджикистан</option>
+        <option value="TURKMENISTAN">Туркменистан</option>
+        <option value="UZBEKISTAN">Узбекистан</option>
+    </select>
+    <button type="submit"></button>
+</form>
+</body>
+</html>
